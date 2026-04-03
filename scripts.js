@@ -15,11 +15,16 @@ function createGrid(l) {
 createGrid(16);
 
 btn.addEventListener("click", () =>{
-    const nr = Number(window.prompt("Choose the number of squares per side", ""));
+    let nr = Number(window.prompt("Choose the number of squares per side(1 - 100 range)", ""));
+    
+    if (nr > 100) 
+        nr = 100;
 
-    while (mainDiv.firstChild) {
-        mainDiv.removeChild(mainDiv.firstChild);
+    if(nr >= 1 && nr <= 100){
+        while (mainDiv.firstChild) {
+            mainDiv.removeChild(mainDiv.firstChild);
+        }
+
+        createGrid(nr);
     }
-
-    createGrid(nr);
 });
