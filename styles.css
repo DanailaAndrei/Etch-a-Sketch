@@ -1,25 +1,25 @@
 html, body {
     padding: 0;
     margin: 0;
-    height: 100%;
-    width: 100%;
-}
-
-body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+button {
+    height: 5vh;
+    width: 20vh;
 }
 
 .mainDiv {
     display: flex;
-    height: 100%;
-    aspect-ratio: 1;
+    height: 90vh;
+    width: 90vh;
     flex-wrap: wrap;
-    align-content: flex-start;
 }
 
 .childDiv {
     background-color: lightgray;
-    height: 6%;
-    width: 6%;
 }
